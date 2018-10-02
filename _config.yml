@@ -1,1 +1,18 @@
 theme: jekyll-theme-architect
+
+# Site
+title: xchens
+subtitle: 
+description: 陈实的博客
+keywords: blog
+author: xchens
+language: 
+timezone:
+
+index_generator:
+  path: ''
+  per_page: 10
+  order_by: -date
+  
+per_page: 10
+pagination_dir: page
