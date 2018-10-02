@@ -1,12 +1,6 @@
 ---
 title: cshsonice's blog
-categories:[
-- [Welcome to my blog](#welcome-to-my-blog)
-    - [Interest](#interest)
-        - [常用的编程语言](#常用的编程语言)
-        - [感兴趣的方向](#感兴趣的方向)
-    - [Contact](#contact)
-]
+categories: 
 tags: [instroduction]
 ---
 
