@@ -9,6 +9,11 @@ tags: [instroduction]
 这里记录着我的一些个人学习记录与心得分享。
 欢迎共同交流进步。
 
+### 目录结构
+* [python](python)
+* [c++](cpp)
+* [笔记](note)
+
 ### Interest
 #### 常用的编程语言
 * python
