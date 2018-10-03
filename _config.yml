@@ -11,8 +11,8 @@ timezone:
 url: https://xchens.cn
 
 markdown: kramdown
-kramdown:
-    input: GFM
-highlighter: rouge
+# kramdown:
+#     input: GFM
+# highlighter: rouge
 
 
