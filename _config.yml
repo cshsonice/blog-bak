@@ -9,12 +9,5 @@ author: 陈实
 language: 
 timezone:
 
-index_generator:
-  path: ''
-  per_page: 10
-  order_by: -date
-  
-per_page: 10
-pagination_dir: page
 
 
