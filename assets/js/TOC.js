@@ -11,10 +11,10 @@ var h5 = mcontent.getElementsByTagName("h5");
 
 // 侧边栏修改
 var sidebar = document.getElementById("sidebar");
-sidebar.innerHTML = " ";  // clear sidebar
+// sidebar.innerHTML = " ";  // clear sidebar
 
 console.log(h1);
 console.log(h2);
 console.log(h3);
 console.log(sidebar);
-
+console.log($("#sidebar"))
