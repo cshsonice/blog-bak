@@ -65,6 +65,22 @@ function set_TOC(m){
 
 // 2. ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
 
+//生成从minNum到maxNum的随机整数
+function randomNum(minNum,maxNum){ 
+    // Math.random()  // [0,1)
+    switch(arguments.length){ 
+        case 1: 
+            return Math.floor(Math.random()*minNum); // [0, n)
+            break; 
+        case 2: 
+            return Math.floor(Math.random()*(maxNum-minNum)+minNum); // [n, m)
+            break; 
+        default: 
+            return 0; 
+            break; 
+    }
+}
+
 function modify_motto(motto){
     // 定位到格言位置
     var header = document.getElementsByTagName('header')[0];
@@ -73,8 +89,14 @@ function modify_motto(motto){
     my_motto.innerText = motto;
 }
 
-function get_motto(){
-    console.log('start');
+function set_motto(mottoes){
+    //周期性更新motto
+    var n = randomNum(mottoes.motto.length)
+    var motto = mottoes.motto[n];  // get随机的motto
+    modify_motto(motto); // 修改
+}
+
+function get_mottoes(){
     //1.创建AJAX对象
     var ajax = new XMLHttpRequest();
     //4.给AJAX设置事件(这里最多感知4[1-4]个状态)
@@ -83,12 +105,13 @@ function get_motto(){
         //responseText以字符串的形式接收服务器返回的信息
         //console.log(ajax.readyState);
         if(ajax.readyState == 4 && ajax.status == 200){
-            var msg = ajax.responseText;
-            console.log(msg);
-            alert(msg);
+            let msg = ajax.responseText;
+            let mottoes = JSON.parse(msg);  //数据转化为json对象
+            
+            //周期性更新
+            setInterval(set_motto(mottoes), 5000);
         }
     }
-    
     //2.创建http请求,并设置请求地址
 
     ajax.open('get', '/assets/data/motto.json');
@@ -96,6 +119,10 @@ function get_motto(){
     ajax.send(null);
 }
 
+function update_motto(){
+    //最后封装版
+    get_mottoes();
+}
 
 //----------------main----------------------↓↓↓↓↓↓↓
 
@@ -103,7 +130,7 @@ var mcontent = document.getElementById("main-content");  // content area
 
 set_TOC(mcontent); // 设置右侧目录
 
-modify_motto(get_motto());  // 更新格言
+update_motto();  // 更新格言
 
 
 
