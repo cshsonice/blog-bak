@@ -8,6 +8,9 @@ keywords: blog
 author: 陈实
 language: 
 timezone:
-
+markdown: kramdown
+kramdown:
+    input: GFM
+highlighter: rouge
 
 
