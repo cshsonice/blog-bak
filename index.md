@@ -32,10 +32,10 @@ tags: [instroduction]
 
 qq:3526154926
 
-Email: 3526154926@qq.com（常用） or xanderchen98@gmail.com
+Email: <strong>3526154926@qq.com</strong>（常用）<br> or <strong>xanderchen98@gmail.com</strong>
 
 
 
-[1]: python/
-[2]: cpp/
-[3]: note/
+[1]: python/index.md
+[2]: cpp/index.md
+[3]: note/index.md
