@@ -8,6 +8,8 @@ keywords: blog
 author: 陈实
 language: 
 timezone:
+url: https://xchens.cn
+
 markdown: kramdown
 kramdown:
     input: GFM
