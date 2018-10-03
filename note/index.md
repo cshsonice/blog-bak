@@ -10,4 +10,5 @@
 
 
 
+<script type="text/javascript" src="/assets/js/TOC.js"></script>
 [1]: 分治算法初步.md
