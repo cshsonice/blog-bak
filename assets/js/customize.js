@@ -109,6 +109,7 @@ function get_mottoes(){
             let mottoes = JSON.parse(msg);  //数据转化为json对象
             
             //周期性更新
+            set_motto(mottoes); // 避免老是以同一个motto作为开始
             setInterval(()=>{set_motto(mottoes)}, 11000);
         }
     }
