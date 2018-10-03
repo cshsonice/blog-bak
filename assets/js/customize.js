@@ -1,0 +1,110 @@
+/**
+ * 提供自定义设置
+ * 1. 根据dom自动生成目录并显示在右侧目录(手机端显示在底部，没办法)
+ * 2. 自动更换格言（随机）
+ */
+
+// 1. ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+
+// 找到下一个h标签
+function next_h(node){
+    var n = node.nextElementSibling;
+    while(n !== null){
+        if(n.nodeName.length === 2 && n.nodeName.toLowerCase()[0] === "h"){
+            break;
+        }
+        else{
+            n = n.nextElementSibling;
+        }
+    }
+    return n;  // null或<h?>
+}
+function get_indentattion(n){
+    indentation = "----";
+    r = "";
+    for (var i=0;i<n-1;i++){ 
+        r += indentation;
+    }
+    return "<br>" + r + ">";
+}
+
+// 扫描目录输出目录信息
+function output_TOC(t){
+    // 参数t为第一个h标签
+    var html = "";  //待会的sidebar内容
+
+    var line = get_indentattion(Number(t.nodeName[1])) + "<a href=\"#" + t.id +"\">" + t.textContent + "</a><br>\n";
+    html += line;
+    t = next_h(t);
+    while(t!== null){
+        line = get_indentattion(Number(t.nodeName[1])) + "<a href=\"#" + t.id +"\">" + t.textContent + "</a><br>\n";
+        html += line;
+        t = next_h(t);
+    }
+    return html;
+}
+
+// 将已知的目录信息进行提取，设置到右侧导航栏
+function set_TOC(m){
+    // 参数m为内容区域
+    // 侧边栏
+    t = m.firstElementChild; // 内容区域的第一个元素节点（一般是h标签）
+    html = output_TOC(t);
+    
+    var sdbar = document.getElementById("sidebar");  // 侧边栏
+    if(sdbar === null){
+        setTimeout(() => {
+            set_TOC(m); // 递归调用自我
+        }, 1000);
+    }
+    else{
+        sdbar.innerHTML = html;
+    }
+}
+
+
+// 2. ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+
+function modify_motto(motto){
+    // 定位到格言位置
+    var header = document.getElementsByTagName('header')[0];
+    var my_motto = header.firstElementChild.firstElementChild.nextElementSibling;
+    // 修改
+    my_motto.innerText = motto;
+}
+
+function get_motto(){
+    console.log('start');
+    //1.创建AJAX对象
+    var ajax = new XMLHttpRequest();
+    //4.给AJAX设置事件(这里最多感知4[1-4]个状态)
+    ajax.onreadystatechange = function(){
+        //5.获取响应
+        //responseText以字符串的形式接收服务器返回的信息
+        //console.log(ajax.readyState);
+        if(ajax.readyState == 4 && ajax.status == 200){
+            var msg = ajax.responseText;
+            console.log(msg);
+            alert(msg);
+        }
+    }
+    
+    //2.创建http请求,并设置请求地址
+
+    ajax.open('get', '/assets/data/motto.json');
+    //3.发送请求(get--null    post--数据)
+    ajax.send(null);
+}
+
+
+//----------------main----------------------↓↓↓↓↓↓↓
+
+var mcontent = document.getElementById("main-content");  // content area
+
+set_TOC(mcontent); // 设置右侧目录
+
+modify_motto(get_motto());  // 更新格言
+
+
+
+

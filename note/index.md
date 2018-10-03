@@ -15,4 +15,4 @@
 
 [1]: 分治算法初步.md
 
-<script type="text/javascript" src="/assets/js/TOC.js"></script>
+<script type="text/javascript" src="/assets/js/customize.js"></script>

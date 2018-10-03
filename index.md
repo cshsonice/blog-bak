@@ -43,5 +43,5 @@ Email: <strong>3526154926@qq.com</strong>（常用）<br> or <strong>xanderchen9
 [2]: cpp/index.md
 [3]: note/index.md
 
-<script type="text/javascript" src="/assets/js/TOC.js"></script>
+<script type="text/javascript" src="/assets/js/customize.js"></script>
 
