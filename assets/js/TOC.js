@@ -49,7 +49,7 @@ function set_TOC(m){
     if(sdbar === null){
         setTimeout(() => {
             set_TOC(m); // 递归调用自我
-        }, 1);
+        }, 1000);
     }
     else{
         sdbar.innerHTML = html
