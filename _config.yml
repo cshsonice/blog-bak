@@ -4,10 +4,18 @@ theme: jekyll-theme-architect
 title: xchens
 subtitle: blog
 description: 人无远虑，必有近忧
-keywords: blog
+keywords: [blog, 技术, c++, python] 
 author: 陈实
-language: 
+language: zh-CN
 timezone:
+
+links_title: 友情链接
+links:
+  mygithub: https://github.com/cshsonice
+  myzhihu: https://www.zhihu.com/people/chen-sh-55/activities
+
+
+
 
 
 
