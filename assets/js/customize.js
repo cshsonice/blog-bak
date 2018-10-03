@@ -109,7 +109,7 @@ function get_mottoes(){
             let mottoes = JSON.parse(msg);  //数据转化为json对象
             
             //周期性更新
-            setInterval(()=>{set_motto(mottoes)}, 8000);
+            setInterval(()=>{set_motto(mottoes)}, 11000);
         }
     }
     //2.创建http请求,并设置请求地址
