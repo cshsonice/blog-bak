@@ -60,7 +60,7 @@ def get_index(path):
         # 生成文件信息
         files_info = []
         for i in files:
-            if not is_ignore(os.path.join(path, i), ignore_rules):
+            if i.rsplit('.', 1)[-1].lower() == 'md':  # 文件名后缀为md(忽略大小写)
                 files_info.append(f'[{i}][{len(links)+1}]')
                 links.append("[{}]: {}".format(len(links)+1, './'+i))
         
