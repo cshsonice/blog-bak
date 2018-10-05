@@ -60,8 +60,10 @@ def get_index(path):
         # 生成文件信息
         files_info = []
         for i in files:
-            if i.rsplit('.', 1)[-1].lower() == 'md':  # 文件名后缀为md(忽略大小写)
-                files_info.append(f'[{i}][{len(links)+1}]')
+            filename = i.rsplit('.', 1)[0].lower() 
+            filetype = i.rsplit('.', 1)[-1].lower()
+            if filetype == 'md' and filename != 'index':  # 文件名后缀为md(忽略大小写)
+                files_info.append(f'[{i[:-3]}][{len(links)+1}]')  # 忽略文件后缀.md
                 links.append("[{}]: {}".format(len(links)+1, './'+i))
         
         # index.md
