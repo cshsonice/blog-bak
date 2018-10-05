@@ -43,9 +43,9 @@ def get_index(path):
         fdlist = os.listdir(path)
         files, dirs = [], []
         for i in fdlist:
-            if os.path.isdir(i):
+            if os.path.isdir(os.path.join(path, i)):
                 dirs.append(i)
-            elif os.path.isfile(i):
+            elif os.path.isfile(os.path.join(path, i)):
                 files.append(i)
         links = []  # 链接信息
         # 生成目录信息
