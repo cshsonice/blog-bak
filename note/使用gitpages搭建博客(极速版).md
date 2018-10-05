@@ -15,9 +15,12 @@ categories: note
 3. 进入设置界面，点击选择主题。
 
 <div align="center">
+![Octocat](https://assets-cdn.github.com/images/icons/emoji/octocat.png)
+
 
 ![演示图][2]
 </div>
+![Octocat](https://assets-cdn.github.com/images/icons/emoji/octocat.png)
 
 4. 你以为还有四五六七八？教程已经结束。可以直接开始写文章上传了。
 
