@@ -6,6 +6,7 @@
 """
 import sys
 import os
+from func import read_ignore, is_ignore
 
 in_include = "/assets/js/customize.js"  # include的一小段，用来判断是否存在include
 include = """\n\n\n<script type="text/javascript" src="/assets/js/customize.js"></script>\n"""
@@ -23,40 +24,6 @@ def add_include(file):
         f.write(include)
     return True  # 插入成功
 
-def is_ignore(root_or_file, ignore_rules):
-    """判读目录或文件是否应当被忽略
-    
-    只支持两种.gitignore规则：*.file 与 dir/
-    """
-    if os.path.isdir(root_or_file):
-        for i in ignore_rules:
-            if i.endswith('/'):
-                i = i[:-1]  # 去除最后的'/'
-                # i为目录名
-                # 这里有个神奇的事 '\\'与'/'都只算一个符号所以linux也兼容
-                if root_or_file[2:].startswith(i):
-                    return True
-    elif os.path.isfile(root_or_file):
-        for i in ignore_rules:
-            if i.startswith('*'):
-                i = i[1:]  # 去除首位的'*'
-                # i为文件后缀
-                if root_or_file.endswith(i):
-                    return True
-    else:
-        # 既不是文件也不是目录，应该是符号链接啥的
-        print(root_or_file, 'is not file and is not dir')
-        return True
-        
-    return False
-
-def read_ignore(filename='.gitignore'):
-    with open('.gitignore', encoding='utf8') as f:
-        ignore_rules = f.readlines()
-        for i in range(len(ignore_rules)):
-            ignore_rules[i] = ignore_rules[i].strip()
-        ignore_rules.append('.git/')  # .gitignore不忽略.git/,但这里需要忽略
-    return ignore_rules
 
 def find_md(directory, func=None):
     """从指定文件夹开始，递归找到所有的文章: md

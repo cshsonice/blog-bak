@@ -1,3 +1,4 @@
 *.zip
 pages-themes-architect/
 .vscode/
+__pycache__/
