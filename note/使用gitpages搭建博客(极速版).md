@@ -16,7 +16,7 @@ categories: note
 
 <div align="center">
 
-![演示图][1]
+![演示图][2]
 </div>
 
 4. 你以为还有四五六七八？教程已经结束。可以直接开始写文章上传了。
@@ -28,3 +28,6 @@ categories: note
 
 
 [1]: https://xchens-1254410906.cos.ap-shanghai.myqcloud.com/images/gitpages_choose_theme12345.png
+[2]: ../images/favicon.png
+
+<script type="text/javascript" src="/assets/js/customize.js"></script>
