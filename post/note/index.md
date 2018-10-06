@@ -1,3 +1,9 @@
+---
+title: 笔记
+description: 零碎的学习记录
+---
+
+
 ## 知识笔记
 
 > 不积小流，无以成江海。
@@ -7,7 +13,6 @@
 | articles                        |
 |:-------------------------------:|
 | [使用gitpages搭建博客(极速版)][1]     |
-| [分治算法初步][2]                  |
 
 
 ### 内容相关
@@ -20,6 +25,6 @@
 
 
 [1]: ./使用gitpages搭建博客(极速版).md
-[2]: ./分治算法初步.md
+
 
 <script type="text/javascript" src="/assets/js/customize.js"></script>
