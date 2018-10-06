@@ -4,6 +4,8 @@ date: 2018-10-05
 tags: [博客]
 categories: note
 ---
+## 使用gitpages搭建博客(极速版)
+
 ### 前言
 网上有很多美观大方的博客，基于git pages的也有很多好看而精美的博客样式。
 
