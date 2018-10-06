@@ -124,6 +124,14 @@ function update_motto(){
     //最后封装版
     get_mottoes();
 }
+// 3. ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+
+function jump2https(){
+    var targetProtocol = "https:";
+    if (window.location.protocol != targetProtocol) 
+        window.location.href = targetProtocol +
+        window.location.href.substring(window.location.protocol.length);
+}
 
 //----------------main----------------------↓↓↓↓↓↓↓
 
@@ -132,6 +140,8 @@ var mcontent = document.getElementById("main-content");  // content area
 set_TOC(mcontent); // 设置右侧目录
 
 update_motto();  // 更新格言
+
+jump2https();//js 自动从http跳转到https（必须先加载http，所以不能禁用http）
 
 
 
