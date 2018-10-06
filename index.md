@@ -39,8 +39,8 @@ Email: <strong>3526154926@qq.com</strong>（常用）<br> or <strong>xanderchen9
 
 
 
-[1]: python/index.md
-[2]: cpp/index.md
-[3]: note/index.md
+[1]: post/python/index.md
+[2]: post/cpp/index.md
+[3]: post/note/index.md
 
 <script type="text/javascript" src="/assets/js/customize.js"></script>
