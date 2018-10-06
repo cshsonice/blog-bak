@@ -3,7 +3,7 @@ theme: jekyll-theme-architect
 # Site
 title: xchens
 subtitle: blog
-description: 人无远虑，必有近忧
+description: 陈实的技术分享博客
 keywords: [blog, 技术, c++, python] 
 author: 陈实
 language: zh-CN
