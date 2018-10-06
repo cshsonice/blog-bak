@@ -79,7 +79,7 @@ description: github gitpages blog
 
 
 
-[1]: https://xchens-1254410906.cos.ap-shanghai.myqcloud.com/images/gitpages_choose_theme12345.png
+[1]: https://xchens-1254410906.cos.ap-shanghai.myqcloud.com/assets/images/gitpages_choose_theme12345.png
 [2]: https://help.github.com/categories/github-pages-basics/
 [3]: https://jekyllrb.com/docs/
 [4]: https://xchens.cn/
