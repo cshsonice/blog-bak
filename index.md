@@ -11,11 +11,12 @@ tags: [instroduction]
 
 ### :D
 
-| 目录              |
-|:-----------------:|
-| [python][1]       |
-| [c++][2]          |
-| [笔记][3]         |
+| index              |
+|:-------------------|
+| [algorithm][1]     |
+| [c++][2]           |
+| [note][3]          |
+| [python][4]        |
 
 
 ### Interest
@@ -38,9 +39,10 @@ Email: <strong>3526154926@qq.com</strong>（常用）<br> or <strong>xanderchen9
 
 
 
-
-[1]: post/python/index.md
+[1]: post/algorithm/index.md
 [2]: post/cpp/index.md
 [3]: post/note/index.md
+[4]: post/python/index.md
+
 
 <script type="text/javascript" src="/assets/js/customize.js"></script>
