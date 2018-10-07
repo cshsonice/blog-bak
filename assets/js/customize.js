@@ -162,12 +162,13 @@ function dom_insert_comment(mcontent){
     console.log(mycomments);
 }*/
 
-var comments =
-" <div id=\"container\"></div> \
+var comments =" <div id=\"container\"></div> ";  
+/*
 <link rel=\"stylesheet\" href=\"https://imsun.github.io/gitment/style/default.css\"> \
 <script src=\"https://imsun.github.io/gitment/dist/gitment.browser.js\"></script> \
-"
+*/  
 function import_gitment(){
+    
     var gitment = new Gitment({
     // id: '页面 ID', // 可选。默认为 location.href
     owner: 'cshsonice',  // '你的 GitHub ID',
