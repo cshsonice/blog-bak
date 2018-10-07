@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}" media="screen" type="text/css">
     <link rel="stylesheet" href="{{ '/assets/css/print.css' | relative_url }}" media="print" type="text/css">
 
+    <!--评论-->
+    <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css"> 
+    <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script> 
+
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -34,6 +38,21 @@
       <div class="inner clearfix">
         <section id="main-content">
           {{ content }}
+
+
+          <div id="container"></div>
+          <script>
+            var gitment = new Gitment({
+            // id: '页面 ID', // 可选。默认为 location.href
+            owner: 'cshsonice',  // '你的 GitHub ID',
+            repo: 'https://github.com/cshsonice/comments-store.git',   //'存储评论的 repo',
+            oauth: {
+                client_id: '968819c3b408b9bf10fc',  // '你的 client ID',
+                client_secret: 'a8e49e21fed121be1d12f932bd1547f1a24e5e26',  //'你的 client secret',
+            },
+            })
+            gitment.render('container');
+          </script>
         </section>
 
         <aside id="sidebar">
