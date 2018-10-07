@@ -133,7 +133,9 @@ function jump2https(){
         window.location.href.substring(window.location.protocol.length);
 }
 
-// 3. ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+// 4. ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+// ↓来比力评论系统↓
+/*
 function import_livere_comments(d, s){
     var j, e = d.getElementsByTagName(s)[0];
 
@@ -158,7 +160,8 @@ function dom_insert_comment(mcontent){
     mcontent.appendChild(mycomments);
     import_livere_comments(document, 'script'); 
     console.log(mycomments);
-}
+}*/
+
 
 //----------------main----------------------↓↓↓↓↓↓↓
 
@@ -170,6 +173,6 @@ update_motto();  // 更新格言
 
 jump2https();//js 自动从http跳转到https（必须先加载http，所以不能禁用http）
 
-dom_insert_comment(mcontent); // 插入评论模块
+// dom_insert_comment(mcontent); // 插入评论模块
 
 
