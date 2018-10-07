@@ -147,7 +147,7 @@ function import_livere_comments(d, s){
 }
 var comments = 
 "<div id=\"lv-container\" data-id=\"city\" data-uid=\"MTAyMC80MDE4My8xNjcxMA==\">\n  \
-import_livere_comments(document, 'script');  \
+ \
 <noscript>为正常使用评论功能请激活JavaScript</noscript>\n  \
 </div>";
 
@@ -156,7 +156,7 @@ function dom_insert_comment(mcontent){
     var mycomments = document.createElement('div');
     mycomments.innerHTML = comments;
     mcontent.appendChild(mycomments);
-
+    import_livere_comments(document, 'script'); 
     console.log(mycomments);
 }
 
