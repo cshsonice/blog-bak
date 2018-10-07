@@ -27,4 +27,3 @@ description: 零碎的学习记录
 [1]: ./使用gitpages搭建博客(极速版).md
 
 
-<script type="text/javascript" src="/assets/js/customize.js"></script>

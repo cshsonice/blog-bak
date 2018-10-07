@@ -86,4 +86,3 @@ description: github gitpages blog
 
 
 
-<script type="text/javascript" src="/assets/js/customize.js"></script>

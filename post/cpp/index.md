@@ -11,4 +11,3 @@
 
 
 
-<script type="text/javascript" src="/assets/js/customize.js"></script>
