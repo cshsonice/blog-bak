@@ -133,6 +133,33 @@ function jump2https(){
         window.location.href.substring(window.location.protocol.length);
 }
 
+// 3. ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+function import_livere_comments(d, s){
+    var j, e = d.getElementsByTagName(s)[0];
+
+    if (typeof LivereTower === 'function') { return; }
+
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+
+    e.parentNode.insertBefore(j, e);
+}
+var comments = 
+"<div id=\"lv-container\" data-id=\"city\" data-uid=\"MTAyMC80MDE4My8xNjcxMA==\">\n  \
+import_livere_comments(document, 'script');  \
+<noscript>为正常使用评论功能请激活JavaScript</noscript>\n  \
+</div>";
+
+function dom_insert_comment(mcontent){
+    // 插入到主体内容片段下方
+    var mycomments = document.createElement('div');
+    mycomments.innerHTML = comments;
+    mcontent.appendChild(mycomments);
+
+    console.log(mycomments);
+}
+
 //----------------main----------------------↓↓↓↓↓↓↓
 
 var mcontent = document.getElementById("main-content");  // content area
@@ -143,6 +170,6 @@ update_motto();  // 更新格言
 
 jump2https();//js 自动从http跳转到https（必须先加载http，所以不能禁用http）
 
-
+dom_insert_comment(mcontent); // 插入评论模块
 
 
