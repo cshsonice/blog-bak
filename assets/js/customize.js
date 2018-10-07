@@ -162,6 +162,33 @@ function dom_insert_comment(mcontent){
     console.log(mycomments);
 }*/
 
+var comments =
+" <div id=\"container\"></div> \
+<link rel=\"stylesheet\" href=\"https://imsun.github.io/gitment/style/default.css\"> \
+<script src=\"https://imsun.github.io/gitment/dist/gitment.browser.js\"></script> \
+"
+function import_gitment(){
+    var gitment = new Gitment({
+    // id: '页面 ID', // 可选。默认为 location.href
+    owner: 'cshsonice',  // '你的 GitHub ID',
+    repo: 'https://github.com/cshsonice/comments-store.git',   //'存储评论的 repo',
+    oauth: {
+        client_id: '968819c3b408b9bf10fc',  // '你的 client ID',
+        client_secret: 'a8e49e21fed121be1d12f932bd1547f1a24e5e26',  //'你的 client secret',
+    },
+    })
+    gitment.render('container')
+}
+function dom_insert_comment(mcontent){
+    // 插入到主体内容片段下方
+    var mycomments = document.createElement('div');
+    mycomments.innerHTML = comments;
+    mcontent.appendChild(mycomments);
+    import_gitment(); 
+
+}
+
+
 
 //----------------main----------------------↓↓↓↓↓↓↓
 
@@ -173,6 +200,6 @@ update_motto();  // 更新格言
 
 jump2https();//js 自动从http跳转到https（必须先加载http，所以不能禁用http）
 
-// dom_insert_comment(mcontent); // 插入评论模块
+dom_insert_comment(mcontent); // 插入评论模块
 
 
