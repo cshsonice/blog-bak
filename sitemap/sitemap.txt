@@ -1,5 +1,12 @@
 https://xchens.cn/
+
 https://xchens.cn/post/algorithm/
+https://xchens.cn/post/algorithm/%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95%E5%88%9D%E6%AD%A5.html
+
 https://xchens.cn/post/cpp/
+
+
 https://xchens.cn/post/note/
+https://xchens.cn/post/note/%E4%BD%BF%E7%94%A8gitpages%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2(%E6%9E%81%E9%80%9F%E7%89%88).html
+
 https://xchens.cn/post/python/
