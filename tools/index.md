@@ -1,7 +1,7 @@
 ---
-title: 算法
+title: 常用工具
 layout: tools
-description: 算法笔记与记录
+description: 提供在线的常用工具
 ---
 
 # there are some useful tools
