@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sitemapindex>
+    <sitemap>
+        <loc>https://xchens.cn</loc>
+        <lastmod>2018-10-06</lastmod>
+        
+        <loc>https://xchens.cn/post/algorithm/</loc>
+        <lastmod>2018-10-07</lastmod>
+
+        <loc>https://xchens.cn/post/cpp/</loc>
+        <lastmod>2018-10-07</lastmod>
+
+        <loc>https://xchens.cn/post/note/</loc>
+        <lastmod>2018-10-07</lastmod>
+
+        <loc>https://xchens.cn/post/python/</loc>
+        <lastmod>2018-10-07</lastmod>
+
+
+    </sitemap>
+</sitemapindex>
