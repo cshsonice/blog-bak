@@ -1,4 +1,4 @@
-button {
+.mybutton {
     display: inline-block;
     border-radius: 4px;
     background-color: #008CBA;
@@ -15,14 +15,14 @@ button {
     position: relative;
   }
   
-button span {
+.mybutton span {
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.5s;
 }
   
-button span:after {
+.mybutton span:after {
     content: '»';
     position: absolute;
     opacity: 0;
@@ -31,21 +31,21 @@ button span:after {
     transition: 0.5s;
 }
   
-button:hover span {
+.mybutton:hover span {
     padding-right: 25px;
 }
 
-button:hover span:after {
+.mybutton:hover span:after {
     opacity: 1;
     right: 0;
 }
 
-button:hover{
+.mybutton:hover{
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
       
       
-button:after {
+.mybutton:after {
     content: "";
     background: #90EE90;
     display: block;
@@ -58,7 +58,7 @@ button:after {
     transition: all 0.8s
 }
   
-button:active:after {
+.mybutton:active:after {
     padding: 0;
     margin: 0;
     opacity: 1;
