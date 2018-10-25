@@ -1,0 +1,14 @@
+<div id="my_gitment"></div>
+
+<script>
+var gitment = new Gitment({
+  id: '{{ page.id }}', // 可选。默认为 location.href
+  owner: 'cshsonice',
+  repo: 'comment-store',
+  oauth: {
+    client_id: '968819c3b408b9bf10fc',
+    client_secret: 'a8e49e21fed121be1d12f932bd1547f1a24e5e26',
+  },
+})
+gitment.render('my_gitment')
+</script>
