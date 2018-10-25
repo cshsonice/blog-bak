@@ -1,6 +1,6 @@
 ---
 title: 3Sum Closest
-date: 2018-10-09 22:40
+date: 2018-10-09 22:40:00
 tags: [算法, ACM]
 categories: algorithm
 description: leetcode ACM algorithm 
