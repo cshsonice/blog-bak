@@ -1,7 +1,7 @@
 ---
 title: 基于github的git pages搭建博客
 date: 2018-10-05 23:30:00
-tags: [博客]
+tags: [博客, 教程]
 categories: note
 description: github gitpages blog
 ---
