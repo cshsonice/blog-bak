@@ -49,8 +49,8 @@ windows下位于 **C:\Users\Username\.PyCharm2018.2\config\options\jdk.table.xml
 ## the end
 
 参考：
-> [本文解决方案来源][1]
-> [bug issue][2]
+> [本文解决方案来源][1]  
+> [bug issue][2]  
 
 [1]: https://intellij-support.jetbrains.com/hc/en-us/community/posts/360000306410/comments/360000158010
 [2]: https://youtrack.jetbrains.com/issue/PY-27251
