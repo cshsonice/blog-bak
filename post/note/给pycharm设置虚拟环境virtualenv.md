@@ -39,6 +39,8 @@ windows下位于 **C:\Users\Username\.PyCharm2018.2\config\options\jdk.table.xml
 
 ## 怎么找到解决方案的
 
+官网！！！
+
 不要沉迷于CSDN，segmentfault这样的中文解决方案，很多bug可能很多人都遇到过。  
 官网才是最好最直接的方式。  
 
