@@ -12,10 +12,14 @@ become better. hack what I want to hack.
 
 | articles            |
 |:-------------------:|
-| [IDApro-手册][1]      |
-| [ollydbg-手册][2]     |
-| [汇编日志][3]           |
+| [gdb-手册][1]         |
+| [IDApro-手册][2]      |
+| [ollydbg-手册][3]     |
+| [PE文件分析][4]         |
+| [汇编日志][5]           |
 
-[1]: ./IDApro-手册.md
-[2]: ./ollydbg-手册.md
-[3]: ./汇编日志.md
+[1]: ./gdb-手册.md
+[2]: ./IDApro-手册.md
+[3]: ./ollydbg-手册.md
+[4]: ./PE文件分析.md
+[5]: ./汇编日志.md
