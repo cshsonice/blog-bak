@@ -4,7 +4,16 @@
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <!--bootstrap4-->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+    <!--my css and js-->
     <link rel="stylesheet" href="{{ '/assets/css/tools.css' | relative_url }}" media="tools" type="text/css">
+    <script src="{{ './assets/js/tools.js' | relative_url }}"></script>
 
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -19,18 +28,13 @@
         <a href="{{ '/' | absolute_url }}">
           <h1>{{ site.title | default: site.github.repository_name }}</h1>
         </a>
-        <h2>{{ site.description | default: site.github.project_tagline }}</h2>
-        {% if site.github.is_project_page %}
-          <a href="{{ site.github.repository_url }}" class="button"><small>View project on</small> GitHub</a>
-        {% endif %}
-        {% if site.github.is_user_page %}
-          <a href="{{ site.github.owner_url }}" class="button"><small>Follow me on</small> GitHub</a>
-        {% endif %}
-      </div>
+        <a href="{{ '/tools' | absolute_url }}">
+          <h2>tools</h2>
+        </a>
     </header>
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
+    <div id="content" style="display:none">
+      <div>
         <section id="main-content">
           {{ content }}
         </section>
@@ -40,6 +44,10 @@
         </aside>
 
       </div>
+    </div>
+
+    <div id="loading">
+      <h1>Loading...</h1>
     </div>
 
     {% if site.google_analytics %}

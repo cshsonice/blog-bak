@@ -4,6 +4,11 @@ layout: tools
 description: 提供在线的常用工具
 ---
 
+# 本页面所列工具((**大部分**))仍在开发当中
+
+至于什么时候做完，作者也不知道，只能尽量在闲暇时开发  
+不过已经开发好的(或者说已经能用的)，可以保证会一直提供服务，请放心使用
+
 # there are some useful tools
 
 <button class="mybutton"><span> [url 编码/解码][0] </span></button>   
