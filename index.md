@@ -4,6 +4,7 @@ categories:
 date: 2018-10-04 22:00:00
 tags: [instroduction]
 ---
+# xchens
 
 ## Welcome to my blog
 
@@ -19,13 +20,19 @@ tags: [instroduction]
 | [note][3]          |
 | [python][4]        |
 
+### 工具
+
+[工具][5]
 
 ### Interest
+
 #### 常用的编程语言
+
 * python
 * c++
 
 #### 感兴趣的方向
+
 * 数据挖掘
 * 爬虫
 * 逆向
@@ -37,13 +44,8 @@ qq:3526154926
 
 Email: <strong>3526154926@qq.com</strong>（常用）<br> or <strong>xanderchen98@gmail.com</strong>
 
-
-
-
 [1]: post/algorithm/index.md
 [2]: post/cpp/index.md
 [3]: post/note/index.md
 [4]: post/python/index.md
-
-
-<script type="text/javascript" src="/assets/js/customize.js"></script>
+[5]: tools/
