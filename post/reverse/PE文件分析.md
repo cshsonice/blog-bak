@@ -47,6 +47,7 @@ IMAGE_DOS_HEADER = {
         '可选头IMAGE_OPTIONAL_HEADER' // 224字节 0xE0
     }
 ```
+
 可选头的最后一项是数据目录。  
 数据目录是一个数组，每一项包括两个字段，共20字节，分别是数据目录项的VitualAddress(实际上是RVA)和size
 
