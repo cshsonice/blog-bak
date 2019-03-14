@@ -9,9 +9,5 @@ date: 2018-11-11 22:00:00
 | [reverse][1]     |
 | [web][2]         |
 
-| articles     |
-|:------------:|
-| None         |
-
 [1]: ./reverse/index.md
 [2]: ./web/index.md
