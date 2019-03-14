@@ -19,10 +19,11 @@ tags: [instroduction]
 | [c++][2]           |
 | [note][3]          |
 | [python][4]        |
+| [security][5]      |
 
 ### 工具
 
-[工具][5]
+[工具][6]
 
 ### Interest
 
@@ -48,4 +49,5 @@ Email: <strong>3526154926@qq.com</strong>（常用）<br> or <strong>xanderchen9
 [2]: post/cpp/index.md
 [3]: post/note/index.md
 [4]: post/python/index.md
-[5]: tools/
+[5]: post/security/index.md
+[6]: tools/
