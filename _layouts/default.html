@@ -8,10 +8,7 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}" media="screen" type="text/css">
     <link rel="stylesheet" href="{{ '/assets/css/print.css' | relative_url }}" media="print" type="text/css">
 
-    <!--include gitment-->
-    <link rel="stylesheet" href="{{ '/assets/css/gitment.css' | relative_url }}">
-    <script src="{{ '/assets/js/gitment.js' | relative_url }}"></script>
-    
+
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -40,8 +37,6 @@
         <section id="main-content">
           {{ content }}
           <br><br><br>
-          <!--gitment-->
-          {% include gitment.html %}
         </section>
 
         <aside id="sidebar">
