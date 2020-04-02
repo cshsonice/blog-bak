@@ -1,15 +1,8 @@
----
-title: cshsonice's blog
-date: 2018-10-04 22:00:00
-tags: [instroduction]
-layout: default
-title: My Blog
----
 <ul>
     {% for post in site.posts %}
       <li>
         <a href="{{ post.url }}">{{ post.title }}</a>
-        <p>{{ post.excerpt }}</p>
+        <!-- <p>{{ post.excerpt }}</p> -->
       </li>
     {% endfor %}
-  </ul>
+</ul>
