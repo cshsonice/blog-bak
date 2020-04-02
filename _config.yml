@@ -9,7 +9,8 @@ author: cshsonice
 language: zh-CN
 timezone:
 url: https://xchens.cn
-
+paginate: 5
+paginate_path: "/page:num"
 permalink: pretty
 
 
