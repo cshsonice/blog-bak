@@ -35,11 +35,11 @@
     <div id="content-wrapper">
       <div class="inner clearfix">
         {% if page.tags %}
-        <ul id="tags">
+        <div id="tags">
           {% for tag in page.tags %}
             <a> #{{ tag }}&nbsp;&nbsp; </a>
           {% endfor %}
-        </ul>
+        </div>
         {% endif %}
         <section id="main-content">
           {{ content }}
