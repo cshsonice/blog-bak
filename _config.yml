@@ -10,12 +10,7 @@ language: zh-CN
 timezone:
 url: https://xchens.cn
 
-links_title: 友情链接
-links:
-  mygithub: https://github.com/cshsonice
-  myzhihu: https://www.zhihu.com/people/chen-sh-55/activities
+permalink: pretty
 
-  wtt: https://boringboys.top
-  lcf: https://leepanda.gitee.io
 
 
