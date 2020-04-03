@@ -14,5 +14,7 @@ paginate_path: "/page:num"
 permalink: pretty
 plugins:
     - jekyll-sitemap 
+exclude:
+    - docs
 
 
