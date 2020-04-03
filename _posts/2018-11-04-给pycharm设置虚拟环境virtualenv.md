@@ -2,7 +2,6 @@
 title: 给pycharm设置虚拟环境virtualenv
 date: 2018-11-04 18:30:00
 tags: [pycharm, virtualenv, 教程]
-categories: note
 description: 解决pycharm在给项目新建虚拟环境时报错"please sperify a different sdk name"
 ---
 

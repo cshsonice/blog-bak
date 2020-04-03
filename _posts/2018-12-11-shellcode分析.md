@@ -2,6 +2,7 @@
 title: shellcode
 description: shellcode 实战
 date: 2018-12-11 00:25:00
+tags: [shellcode]
 ---
 
 -- 未完成

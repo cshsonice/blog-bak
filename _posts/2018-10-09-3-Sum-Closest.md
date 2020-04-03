@@ -1,9 +1,8 @@
 ---
 title: 3Sum Closest
 date: 2018-10-09 22:40:00
-tags: [算法, ACM]
-categories: algorithm
-description: leetcode ACM algorithm 
+tags: [算法, ACM, leetcode]
+description: 题解：在给定的n个数中找到三个数，令其和最接近target，返回三数之和
 ---
 # 3Sum Closest
 
