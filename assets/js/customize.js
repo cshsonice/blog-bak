@@ -148,14 +148,15 @@ function fix_sidebar() {
         offLeft += Y.offsetLeft;
         Y = Y.offsetParent;
     }
-    let rawWidth = window.innerWidth;  // 可用窗口大小
+    let rawWidth = window.innerWidth;   // 可用窗口宽度
+    let rawHeight = window.innerHeight; // 可用窗口高度
     window.onscroll = function () {
-        var s = document.body.scrollTop || document.documentElement.scrollTop
+        var s = document.body.scrollTop || document.documentElement.scrollTop;
         if (s > offHeight && rawWidth == window.innerWidth) {
             // 当前div滚动到顶部 && 窗口大小未改变
-            oDiv.style = `position:fixed; left:${offLeft}px; top:0;`
+            oDiv.style = `position:fixed; left:${offLeft}px; top:0;overflow:auto;max-height:${rawHeight*0.6}`;
         } else {
-            oDiv.style = ""
+            oDiv.style = "";
         }
     }
 }
