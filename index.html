@@ -3,10 +3,11 @@ layout: default
 ---
 <style>
     .post-card {
-      transition: 0.3s;
-      border-radius: 5px;box-shadow: 0 0 0px 1px #07a;
+        transition: 0.3s;
+        border-radius: 5px;box-shadow: 0 0 0px 1px #07a;
         background-color: white;
         padding:1% 3%;
+        margin-bottom: 20px;
     }
     
     .post-card:hover {
@@ -16,21 +17,17 @@ layout: default
         display:flex;
         justify-content: space-between;
     }
-    .post-card-body{
-    
-    }
-    .post-card-title{
-        margin: 5px 3px;
-    }
+
     
 </style>
 {% for post in paginator.posts %}
-    <div class="post-card" href="{{ post.url }}">
+<a href="{{ post.url }}">
+    <div class="post-card">
         <div class="post-card-header">
-            <h3 class="post-card-title">{{ post.title }}</h3>
-            <p class="post-card-title">{{ post.date | date_to_string }}</p>
+            <h3 style="margin: 5px 3px;" >{{ post.title }}</h3>
+            <p style="margin: 5px 3px;" >{{ post.date | date_to_string }}</p>
         </div>
-        <hr width=70% size=1 align=left  color=#bbbcbc> 
+        <hr width=70% size=1 align=left  color=#bbbcbc style="margin: 10px 0px;"> 
         <div class="post-card-body">
             {% if post.description %}
             <p>{{ post.description }}</p>
@@ -39,6 +36,7 @@ layout: default
             {% endif %}
         </div>
     </div>
+</a>
 {% endfor %}
 
 
