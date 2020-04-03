@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+<h3>Index</h3>
 <style>
     .post-card {
         transition: 0.3s;
@@ -16,10 +17,9 @@ layout: default
     .post-card-header{
         display:flex;
         justify-content: space-between;
-    }
-
-    
+    }    
 </style>
+
 {% for post in paginator.posts %}
 <a href="{{ post.url }}">
     <div class="post-card">
@@ -38,9 +38,6 @@ layout: default
     </div>
 </a>
 {% endfor %}
-
-
-
 
 {% if paginator.total_pages > 1 %}
 <div class="pagination">

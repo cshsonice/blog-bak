@@ -49,6 +49,8 @@ function set_TOC(m){
     // 参数m为内容区域
     // 侧边栏
     t = m.firstElementChild; // 内容区域的第一个元素节点（一般是h标签）
+    if(t.innerText.toLowerCase() == "index") return; // 检测到当前页为索引页，不生成目录
+
     html = output_TOC(t);
     
     var sdbar = document.getElementById("sidebar");  // 侧边栏
