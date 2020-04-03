@@ -154,7 +154,7 @@ function fix_sidebar() {
         var s = document.body.scrollTop || document.documentElement.scrollTop;
         if (s > offHeight && rawWidth == window.innerWidth) {
             // 当前div滚动到顶部 && 窗口大小未改变
-            oDiv.style = `position:fixed; left:${offLeft}px; top:0;overflow:auto;max-height:${rawHeight*0.8}`;
+            oDiv.style = `position:fixed; left:${offLeft}px; top:0;overflow:auto;max-height:${rawHeight*0.8}px`;
         } else {
             oDiv.style = "";
         }
