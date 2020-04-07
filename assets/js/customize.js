@@ -55,7 +55,7 @@ function set_TOC(m) {
 
     var sdbar = document.getElementById("sidebar");  // 侧边栏
     if (sdbar === null) {
-        setTimeout(() => {
+        setTimeout(function(){
             set_TOC(m); // 递归调用自我
         }, 1000);
     }
