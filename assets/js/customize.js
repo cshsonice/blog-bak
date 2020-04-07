@@ -175,5 +175,10 @@ window.onload = function () {
     }
     set_TOC(mcontent); // 设置右侧目录
     fix_sidebar(); // 固定目录块
+    DarkReader.auto({
+        brightness: 100, // 明亮度
+        contrast: 109,   // 对比度
+        sepia: 10        // 棕褐色
+    });  // 深色模式
 }
 
