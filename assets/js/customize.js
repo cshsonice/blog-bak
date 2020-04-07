@@ -112,7 +112,7 @@ function get_mottoes() {
 
             //周期性更新
             set_motto(mottoes); // 避免老是以同一个motto作为开始
-            setInterval(() => { set_motto(mottoes) }, 11000);
+            setInterval(function(){ set_motto(mottoes) }, 11000);
         }
     }
     //2.创建http请求,并设置请求地址
