@@ -161,6 +161,23 @@ function fix_sidebar() {
     }
 }
 
+// 5. ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+
+// 切换深色或浅色主题
+function cs_toggleTheme(e){
+    let checkbox = document.getElementById("toggleThemeCheckbox");
+    if(checkbox.checked){
+        // 开启深色主题
+        DarkReader.enable({
+            brightness: 100, // 明亮度
+            contrast: 109,   // 对比度
+            sepia: 10        // 棕褐色
+        });  // 深色模式
+    }
+    else{
+        DarkReader.disable();
+    }
+}
 
 //----------------main----------------------↓↓↓↓↓↓↓
 
@@ -168,11 +185,7 @@ jump2https();//js 自动从http跳转到https（必须先加载http，所以不�
 
 window.onload = function () {
     update_motto();  // 更新格言
-    DarkReader.auto({
-        brightness: 100, // 明亮度
-        contrast: 109,   // 对比度
-        sepia: 10        // 棕褐色
-    });  // 深色模式
+    
 
     var mcontent = document.getElementById("main-content");  // content area
     if (mcontent.firstElementChild.innerText.toLowerCase() == "index") {
