@@ -63,7 +63,7 @@ function set_TOC(m) {
 
     var sdbar = document.getElementById("sidebar");  // 侧边栏
     if (sdbar === null) {
-        setTimeout(function(){
+        setTimeout(function () {
             set_TOC(m); // 递归调用自我
         }, 1000);
     }
@@ -120,7 +120,7 @@ function get_mottoes() {
 
             //周期性更新
             set_motto(mottoes); // 避免老是以同一个motto作为开始
-            setInterval(function(){ set_motto(mottoes) }, 11000);
+            setInterval(function () { set_motto(mottoes) }, 11000);
         }
     }
     //2.创建http请求,并设置请求地址
@@ -162,7 +162,7 @@ function fix_sidebar() {
         var s = document.body.scrollTop || document.documentElement.scrollTop;
         if (s > offHeight && rawWidth == window.innerWidth) {
             // 当前div滚动到顶部 && 窗口大小未改变
-            oDiv.style = `position:fixed; left:${offLeft}px; top:0;overflow:auto;max-height:${rawHeight*0.8}px`;
+            oDiv.style = `position:fixed; left:${offLeft}px; top:0;overflow:auto;max-height:${rawHeight * 0.8}px`;
         } else {
             oDiv.style = "";
         }
@@ -172,9 +172,9 @@ function fix_sidebar() {
 // 5. ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
 
 // 切换深色或浅色主题
-function cs_toggleTheme(e){
+function cs_toggleTheme(e) {
     let checkbox = document.getElementById("toggleThemeCheckbox");
-    if(checkbox.checked){
+    if (checkbox.checked) {
         // 开启深色主题
         DarkReader.enable({
             brightness: 100, // 明亮度
@@ -183,7 +183,7 @@ function cs_toggleTheme(e){
         });  // 深色模式
         write_cookie(DARK_MODE_ENABLE, OPEN_TAG);
     }
-    else{
+    else {
         DarkReader.disable();
         write_cookie(DARK_MODE_ENABLE, CLOSE_TAG);
     }
@@ -192,30 +192,34 @@ function cs_toggleTheme(e){
 // 6. ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
 
 // 管理cookie
-function read_cookie(k){
+function read_cookie(k) {
     // 读取cookie
-    let v1 = localStorage.getItem(k);
-    v1 = v1 ? v1 : "";
+    if (k) {
+        let v1 = localStorage.getItem(k);
+        v1 = v1 ? v1 : "";
 
-    v2 = "";
-    if(document.cookie.length>0){
-        c_start = document.cookie.indexOf(k + "=");
-        if(c_start != -1){  // found it !
-            c_start = c_start + c_name.length + 1; 
-            c_end = document.cookie.indexOf(";", c_start);
-            if (c_end == -1) c_end = document.cookie.length;
-            v2 = unescape(document.cookie.substring(c_start, c_end));
+        v2 = "";
+        if (document.cookie.length > 0) {
+            c_start = document.cookie.indexOf(k + "=");
+            if (c_start != -1) {  // found it !
+                c_start = c_start + k.length + 1;
+                c_end = document.cookie.indexOf(";", c_start);
+                if (c_end == -1) c_end = document.cookie.length;
+                v2 = unescape(document.cookie.substring(c_start, c_end));
+            }
         }
+        return v1 ? v1 : v2;  // v1!=v2时，优先选择v1
     }
-    return v1 ? v1 : v2;  // v1!=v2时，优先选择v1
 }
 
-function write_cookie(k, v, expiredays=360){
+function write_cookie(k, v, expiredays = 360) {
     // 写入cookie
-    localStorage.setItem(k,v);
-    let exdate=new Date();
-    exdate.setDate(exdate.getDate()+expiredays);
-    document.cookie=k+ "=" +escape(v)+((expiredays==null) ? "" : ";expires="+exdate.toGMTString())+";path=/";
+    if (k && v) {
+        localStorage.setItem(k, v);
+        let exdate = new Date();
+        exdate.setDate(exdate.getDate() + expiredays);
+        document.cookie = k + "=" + escape(v) + ((expiredays == null) ? "" : ";expires=" + exdate.toGMTString()) + ";path=/";
+    }
 }
 
 //----------------main----------------------↓↓↓↓↓↓↓
@@ -226,7 +230,7 @@ window.onload = function () {
     update_motto();  // 更新格言
 
     dark_mode_tag = read_cookie(DARK_MODE_ENABLE); // 查看是否需要启用深色模式
-    if(dark_mode_tag == OPEN_TAG){
+    if (dark_mode_tag == OPEN_TAG) {
         document.getElementById("toggleThemeCheckbox").click();
     }
 
