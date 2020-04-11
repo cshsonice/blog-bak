@@ -5,6 +5,14 @@
  * 3. http跳转到https
  */
 
+// 0. -----
+
+// 全局变量
+const DARK_MODE_ENABLE = "EnableTheDarkMode";
+const OPEN_TAG = "OpenIt";
+const CLOSE_TAG = "CloseIt";
+
+
 // 1. ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
 
 // 找到下一个h标签
@@ -173,10 +181,41 @@ function cs_toggleTheme(e){
             contrast: 109,   // 对比度
             sepia: 10        // 棕褐色
         });  // 深色模式
+        write_cookie(DARK_MODE_ENABLE, OPEN_TAG);
     }
     else{
         DarkReader.disable();
+        write_cookie(DARK_MODE_ENABLE, CLOSE_TAG);
     }
+}
+
+// 6. ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+
+// 管理cookie
+function read_cookie(k){
+    // 读取cookie
+    let v1 = localStorage.getItem(k);
+    v1 = v1 ? v1 : "";
+
+    v2 = "";
+    if(document.cookie.length>0){
+        c_start = document.cookie.indexOf(k + "=");
+        if(c_start != -1){  // found it !
+            c_start = c_start + c_name.length + 1; 
+            c_end = document.cookie.indexOf(";", c_start);
+            if (c_end == -1) c_end = document.cookie.length;
+            v2 = unescape(document.cookie.substring(c_start, c_end));
+        }
+    }
+    return v1 ? v1 : v2;  // v1!=v2时，优先选择v1
+}
+
+function write_cookie(k, v, expiredays=360){
+    // 写入cookie
+    localStorage.setItem(k,v);
+    let exdate=new Date();
+    exdate.setDate(exdate.getDate()+expiredays);
+    document.cookie=k+ "=" +escape(v)+((expiredays==null) ? "" : ";expires="+exdate.toGMTString())+";path=/";
 }
 
 //----------------main----------------------↓↓↓↓↓↓↓
@@ -185,7 +224,11 @@ jump2https();//js 自动从http跳转到https（必须先加载http，所以不�
 
 window.onload = function () {
     update_motto();  // 更新格言
-    
+
+    dark_mode_tag = read_cookie(DARK_MODE_ENABLE); // 查看是否需要启用深色模式
+    if(dark_mode_tag == OPEN_TAG){
+        document.getElementById("toggleThemeCheckbox").click();
+    }
 
     var mcontent = document.getElementById("main-content");  // content area
     if (mcontent.firstElementChild.innerText.toLowerCase() == "index") {
