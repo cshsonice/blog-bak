@@ -159,7 +159,7 @@ function fix_sidebar() {
     let rawWidth = window.innerWidth;   // 可用窗口宽度
     let rawHeight = window.innerHeight; // 可用窗口高度
     window.onscroll = function () {
-        var s = document.body.scrollTop || document.documentElement.scrollTop;
+        let s = document.body.scrollTop || document.documentElement.scrollTop;
         if (s > offHeight && rawWidth == window.innerWidth) {
             // 当前div滚动到顶部 && 窗口大小未改变
             oDiv.style = `position:fixed; left:${offLeft}px; top:0;overflow:auto;max-height:${rawHeight * 0.8}px`;
@@ -198,7 +198,7 @@ function read_cookie(k) {
         let v1 = localStorage.getItem(k);
         v1 = v1 ? v1 : "";
 
-        v2 = "";
+        let v2 = "";
         if (document.cookie.length > 0) {
             c_start = document.cookie.indexOf(k + "=");
             if (c_start != -1) {  // found it !
@@ -229,13 +229,14 @@ jump2https();//js 自动从http跳转到https（必须先加载http，所以不�
 window.onload = function () {
     update_motto();  // 更新格言
 
-    dark_mode_tag = read_cookie(DARK_MODE_ENABLE); // 查看是否需要启用深色模式
-    togglebtn = document.getElementById("toggleThemeCheckbox");
-    if (dark_mode_tag == OPEN_TAG && !togglebtn.checked) {
+    let dark_mode_tag = read_cookie(DARK_MODE_ENABLE); // 查看是否需要启用深色模式
+    let togglebtn = document.getElementById("toggleThemeCheckbox");
+    togglebtn.checked = false; // 不管原本是什么，先设置为false并不触发切换主题函数
+    if (dark_mode_tag == OPEN_TAG) {
         togglebtn.click();
     }
 
-    var mcontent = document.getElementById("main-content");  // content area
+    let mcontent = document.getElementById("main-content");  // content area
     if (mcontent.firstElementChild.innerText.toLowerCase() == "index") {
         return; // 检测到当前页为索引页，不生成目录
     }
