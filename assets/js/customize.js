@@ -230,8 +230,9 @@ window.onload = function () {
     update_motto();  // 更新格言
 
     dark_mode_tag = read_cookie(DARK_MODE_ENABLE); // 查看是否需要启用深色模式
-    if (dark_mode_tag == OPEN_TAG) {
-        document.getElementById("toggleThemeCheckbox").click();
+    togglebtn = document.getElementById("toggleThemeCheckbox");
+    if (dark_mode_tag == OPEN_TAG && !togglebtn.checked) {
+        togglebtn.click();
     }
 
     var mcontent = document.getElementById("main-content");  // content area
