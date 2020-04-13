@@ -6,6 +6,7 @@ subtitle: blog
 description: cshsonice的技术分享博客
 keywords: [blog, 技术, c++, python] 
 author: cshsonice
+githuburl: https://github.com/cshsonice
 language: zh-CN
 timezone:
 url: https://xchens.cn
