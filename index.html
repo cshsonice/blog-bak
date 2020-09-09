@@ -23,7 +23,7 @@ layout: default
 
 {% for post in paginator.posts %}
 {% if post.ignore %}
-<a href="/">
+<a href="javascript:alert('Not Allowed')">
 {% else %}            
 <a href="{{ post.url }}">
 {% endif %}
