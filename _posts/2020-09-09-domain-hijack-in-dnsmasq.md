@@ -15,6 +15,8 @@ description: Arbitrary domain name hijacking caused by misconfiguration in dnsma
 ```
 server=/a.net/{hacker ip}
 ```
+then restart the dnsmasq to activate this config.  
+* dnsmasq.conf is usually at /usr/local/etc/ if in mac os
 
 2. run this code in the {hacker ip} - `poc.py`
 ```python
