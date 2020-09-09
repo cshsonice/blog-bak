@@ -22,7 +22,11 @@ layout: default
 </style>
 
 {% for post in paginator.posts %}
+{% if post.ignore %}
+<a href="/">
+{% else %}            
 <a href="{{ post.url }}">
+{% endif %}
     <div class="post-card">
         <div class="post-card-header">
             <h3 style="margin: 5px 3px;" >{{ post.title }}</h3>
