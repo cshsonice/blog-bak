@@ -26,4 +26,4 @@ server=/a.net/{hacker ip}
 ![poc][2]
 
 [1]: http://www.thekelleys.org.uk/dnsmasq/doc.html
-[2]: ../assets/images/poc.jpeg
+[2]: /assets/images/poc.jpeg
