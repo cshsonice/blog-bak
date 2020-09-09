@@ -18,7 +18,7 @@ server=/a.net/{hacker ip}
 
 2. run this code in the {hacker ip} - `poc.py`
 ```python
-
+# 
 ```
 
 3. check hijack
