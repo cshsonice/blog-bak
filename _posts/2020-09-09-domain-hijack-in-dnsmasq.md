@@ -19,7 +19,7 @@ then restart the dnsmasq to activate this config.
 * dnsmasq.conf is usually at /usr/local/etc/ if in mac os
 
 2. run this code in the {hacker ip} - `poc.py`
-`
+
 ```python
 #!/usr/bin/env python3
 
