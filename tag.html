@@ -71,7 +71,7 @@ nosidebar: true
         let tags_span = document.getElementsByName("tags_span");
         for (let i = 0, len = tags_span.length; i < len; i++) {
             if (tags_span[i].getAttribute("tag") === queryTag) {
-                tags_span.parentElement.style = "";
+                tags_span[i].parentElement.style = "";
             }
         }
     }
