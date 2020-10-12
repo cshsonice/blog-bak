@@ -3,7 +3,6 @@ title: Arbitrary domain name hijacking caused by misconfiguration in dnsmasq
 date: 2020-09-09 16:50:00
 tags: [dns, dnsmasq]
 description: Arbitrary domain name hijacking caused by misconfiguration in dnsmasq
-ignore: true
 sitemap: false
 ---
 
