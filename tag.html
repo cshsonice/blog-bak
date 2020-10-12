@@ -1,22 +1,7 @@
 ---
 layout: default
+nosidebar: true
 ---
-
-<script>
-    const queryTagName = "tag"
-    function getQueryString(name) {
-        let reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
-        let r = window.location.search.substr(1).match(reg);
-        if (r != null) {
-            return decodeURIComponent(r[2]);
-        };
-        return null;
-    }
-
-
-
-</script>
-
 <style>
     .post-card {
         transition: 0.3s;
@@ -42,8 +27,8 @@ layout: default
 
 {% for post in site.posts %}
 <div style="display: none;">
-    {% for tag in post.tags %}    
-    <span tag="{{tag}}"></span>
+    {% for tag in post.tags %}
+    <span name="tags_span" tag="{{tag}}"></span>
     {% endfor %}
 
     {% if post.ignore %}
@@ -68,3 +53,28 @@ layout: default
     </a>
 </div>
 {% endfor %}
+
+
+
+<script>
+    const queryTagName = "t"
+    function getQueryString(name) {
+        let reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        let r = window.location.search.substr(1).match(reg);
+        if (r != null) {
+            return decodeURIComponent(r[2]);
+        };
+        return null;
+    }
+    function show() {
+        let queryTag = getQueryString(queryTagName);
+        let tags_span = document.getElementsByName("tags_span");
+        for (let i = 0, len = tags_span.length; i < len; i++) {
+            if (tags_span[i].getAttribute("tag") === queryTag) {
+                tags_span.parentElement.style = "";
+            }
+        }
+    }
+    console.log("Start showing articles associated with target tags...")
+    show();
+</script>
