@@ -36,7 +36,7 @@
       {% if page.tags %}
       <ul id="tags">
         {% for tag in page.tags %}
-        <a> #{{ tag }}&nbsp;&nbsp; </a>
+        <a href="/tag?t={{ tag }}"> #{{ tag }}&nbsp;&nbsp; </a>
         {% endfor %}
       </ul>
       {% endif %}

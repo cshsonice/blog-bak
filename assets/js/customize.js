@@ -236,11 +236,11 @@ window.onload = function () {
         togglebtn.click();
     }
 
-    let mcontent = document.getElementById("main-content");  // content area
-    if (mcontent.firstElementChild.innerText.toLowerCase() == "index") {
-        return; // 检测到当前页为索引页，不生成目录
-    }
-    set_TOC(mcontent); // 设置右侧目录
-    fix_sidebar(); // 固定目录块
+    // 若存在sidebar，则生成侧边目录
+    if (document.getElementById("sidebar") !== null){
+        let mcontent = document.getElementById("main-content");  // content area
+        set_TOC(mcontent); // 设置右侧目录
+        fix_sidebar(); // 固定目录块
+    };
 }
 

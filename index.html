@@ -1,7 +1,8 @@
 ---
 layout: default
+nosidebar: true
 ---
-<h3>Index</h3>
+
 <style>
     .post-card {
         transition: 0.3s;
@@ -20,6 +21,8 @@ layout: default
         justify-content: space-between;
     }    
 </style>
+
+<h3>Index</h3>
 
 {% for post in paginator.posts %}
 {% if post.ignore %}
