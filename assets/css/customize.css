@@ -39,3 +39,20 @@
     left: 53%;
     content: "ON";
   }
+
+  .cs_tag{
+    padding: 3px 6px;
+    background-color: #fff;
+    color: #5094d5;
+    border: 1px solid #eaeaef;
+    height: 23px;
+    line-height: 17px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  .cs_tag:hover{
+    background-color: #5094d5;
+    color: #fff;
+  }
