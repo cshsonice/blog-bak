@@ -46,10 +46,9 @@
     color: #5094d5;
     border: 1px solid #eaeaef;
     height: 23px;
-    line-height: 17px;
-    border-radius: 4px;
+    border-radius: 5px;
     display: inline-block;
-    margin-right: 10px;
+    margin-right: 5px;
   }
 
   .cs_tag:hover{

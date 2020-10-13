@@ -45,6 +45,7 @@
     <div class="inner clearfix">
       {% if page.tags %}
       <ul id="tags">
+        Tag:
         {% for tag in page.tags %}
         <a class="cs_tag" href="/tag?t={{ tag }}">{{ tag }}</a>
         {% endfor %}
