@@ -20,7 +20,7 @@
     top: 5%;
     display: block;
     line-height: 20px;
-    width: 45%;
+    width: 60%;
     height: 90%;
     box-sizing: border-box;
     text-align: center;
@@ -32,12 +32,12 @@
   
   .cs_flipswitch:after {
     left: 2%;
-    content: "OFF";
+    content: "LIGHT";
   }
   
   .cs_flipswitch:checked:after {
-    left: 53%;
-    content: "ON";
+    left: 38%;
+    content: "DARK";
   }
 
   .cs_tag{
